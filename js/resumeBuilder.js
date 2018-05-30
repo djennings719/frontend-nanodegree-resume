@@ -3,21 +3,21 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var bio = {
-    "name":"Daniel Jennings",
-    "role":"Unity Developer",
-    "contacts": {
-        "mobile":"719.220.0437",
-        "email":"djenningsais@gmail.com",
-        "portfolio":"https://djennings719.github.io",
-        "github":"https://github.com/djennings719",
-        "twitter":"",
-        "linkedIn":"https://www.linkedin.com/in/danieljennings/",
-        "location":"Houston, TX"
+    name:"Daniel Jennings",
+    role:"Unity Developer",
+    contacts: {
+        mobile:"719.220.0437",
+        email:"djenningsais@gmail.com",
+        portfolio:"https://djennings719.github.io",
+        github:"https://github.com/djennings719",
+        twitter:"",
+        linkedIn:"https://www.linkedin.com/in/danieljennings/",
+        location:"Houston, TX"
     },
-    "welcomeMessage":"Greetings",
-    "skills":["Unity", "C#", "JAVA", "SWING", "JavaScript"],
-    "biopic": "images/fry.jpg",
-    "display":function(){
+    welcomeMessage:"Greetings",
+    skills:["Unity", "C#", "JAVA", "SWING", "JavaScript"],
+    biopic: "images/fry.jpg",
+    display:function(){
         var formattedName = HTMLheaderName.replace("%data%", this.name);
         var formattedRole = HTMLheaderRole.replace("%data%", this.role);
 
@@ -28,8 +28,8 @@ var bio = {
         var formattedLinkedIn = HTMLlinkedin.replace("%data%", this.contacts.linkedIn);
         var formattedBioLocation = HTMLlocation.replace("%data%", this.contacts.location);
 
-        var formattedContactInfo = formattedCellPhone + formattedEmail + formattedPortfolio + formattedGithub + formattedLinkedIn + formattedBioLocation;
-        $('#topContacts').append(formattedContactInfo);
+        var formattedContactInfo = formattedCellPhone + formattedEmail /*+ formattedPortfolio*/ + formattedGithub /*+ formattedLinkedIn*/ + formattedBioLocation;
+        $('#topContacts, #footerContacts').append(formattedContactInfo);
 
         var formattedBioPic = HTMLbioPic.replace("%data%",this.biopic);
         var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
@@ -48,40 +48,40 @@ var bio = {
 }
 
 var education = {
-    "schools": [
+    schools: [
         {
-            "name":"California State University-Hayward",
-            "location":"Hayward, CA",
-            "degree":"BS",
-            "majors":["Computer Science", "Economics"],
-            "minors":["Mathematics"],
-            "dates":"06/2000-06/2006",
-            "url":"http://www.csueastbay.edu/"
+            name:"California State University-Hayward",
+            location:"Hayward, CA",
+            degree:"BS",
+            majors:["Computer Science", "Economics"],
+            minors:["Mathematics"],
+            dates:"06/2000-06/2006",
+            url:"http://www.csueastbay.edu/"
         },
         {
-            "name":"California Polytechnic State University-San Luis Obispo",
-            "location":"San Luis Obispo, CA",
-            "degree":"",
-            "majors":["Computer Science"],
-            "minors":["Mathematics", "Theater Arts"],
-            "dates":"09/2001-03/2004",
-            "url":"https://www.calpoly.edu/"}
+            name:"California Polytechnic State University-San Luis Obispo",
+            location:"San Luis Obispo, CA",
+            degree:"",
+            majors:["Computer Science"],
+            minors:["Mathematics", "Theater Arts"],
+            dates:"09/2001-03/2004",
+            url:"https://www.calpoly.edu/"}
     ],
-    "onlineCourses": [
+    onlineCourses: [
         {
-            "title":"Front-End Web Developer Nanodegree",
-            "school":"Udacity",
-            "dates":"May 2018 - Present",
-            "url":"https://www.udacity.com/"
+            title:"Front-End Web Developer Nanodegree",
+            school:"Udacity",
+            dates:"May 2018 - Present",
+            url:"https://www.udacity.com/"
         },
         {
-            "title":"The Ultimate Guide to Cinematography with Unity",
-            "school":"Udemy",
-            "dates":"April 2018 - Present",
-            "url":"https://www.udemy.com/"
+            title:"The Ultimate Guide to Cinematography with Unity",
+            school:"Udemy",
+            dates:"April 2018 - Present",
+            url:"https://www.udemy.com/"
         }
     ],
-    "display":function(){
+    display:function(){
         for(var i = 0; i < this.schools.length; i++) {
             $('#education').append(HTMLschoolStart);
             var formattedSchoolName = HTMLschoolName.replace("%data%", this.schools[i].name);
@@ -139,21 +139,21 @@ var education = {
 }
 
 var work = {
-    "jobs": [
+    jobs: [
         {
-            "employer":"a.i. solutions Inc.",
-            "title":"Sr Software Engineer",
-            "location":"Houston, TX",
-            "dates":"07/2012 - Present",
-            "description":"Working with the NASA customer to implement JAVA Swing applications for upcoming exploration missions."},
+            employer:"a.i. solutions Inc.",
+            title:"Sr Software Engineer",
+            location:"Houston, TX",
+            dates:"07/2012 - Present",
+            description:"Working with the NASA customer to implement JAVA Swing applications for upcoming exploration missions."},
         {
-            "employer":"ISYS TECHNOLOGIES",
-            "title":" Software Engineer",
-            "location":"Colorado Springs, CO",
-            "dates":"12/2010 - 07/2012",
-            "description":"Working with the Air Force customer to implement upgrades to JAVA Web application."}
+            employer:"ISYS TECHNOLOGIES",
+            title:" Software Engineer",
+            location:"Colorado Springs, CO",
+            dates:"12/2010 - 07/2012",
+            description:"Working with the Air Force customer to implement upgrades to JAVA Web application."}
     ],
-    "display": function () {
+    display: function () {
         for(var i = 0; i < this.jobs.length; i++){
             $('#workExperience').append(HTMLworkStart);
 
@@ -172,29 +172,34 @@ var work = {
 }
 
 var projects = {
-    "projects": [
+    projects: [
         {
-            "title":"JAVA SWING Development",
-            "dates":"October 2015 - Present",
-            "description":"Developed new JAVA SWING applications for the NASA customer.",
-            "images":""
+            title:"JAVA SWING Development",
+            dates:"October 2015 - Present",
+            description:"Developed new JAVA SWING applications for the NASA customer.",
+            images:[]
         },
         {
-            "title":"C# WPF Development",
-            "dates":"June 2015 - October 2015",
-            "description":"Fixed previous implementation of C#/WPF application.",
-            "images":""
+            title:"C# WPF Development",
+            dates:"June 2015 - October 2015",
+            description:"Fixed previous implementation of C#/WPF application.",
+            images:[]
         }
     ],
-    "display":function(){
+    display:function(){
         for(var i = 0; i < this.projects.length; i++){
             $('#projects').append(HTMLprojectStart);
+
+            var formattedProjectString = "";
 
             var formattedProjectTitle = HTMLprojectTitle.replace("%data%", this.projects[i].title);
             var formattedProjectDates = HTMLprojectDates.replace("%data%", this.projects[i].dates);
             var formattedProjectDescription = HTMLprojectDescription.replace("%data%", this.projects[i].description);
-            var formattedProjectImages;
-            var formattedProjectString = formattedProjectTitle + formattedProjectDates + formattedProjectDescription;
+            var formattedProjectImages = "";
+            for(var j = 0; j < this.projects[i].images.length; j++) {
+                formattedProjectImages += HTMLprojectImage.replace("%data%", projects[i].images[j]);
+            }
+            formattedProjectString += formattedProjectTitle + formattedProjectDates + formattedProjectDescription + formattedProjectImages;
 
             $('.project-entry:last').append(formattedProjectString);
 

@@ -26,7 +26,8 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  /*color: #f5a623;*/
+  color: #008080;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +35,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #00564d;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,14 +43,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #00897b;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4a4a4a;
+  color: #00564d;
   line-height: 17px;
 }
 
@@ -65,7 +66,7 @@ h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #282828;
   line-height: 16px;
   float: left;
 }
@@ -73,7 +74,7 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #282828;
   line-height: 16px;
   float: right;
 
@@ -86,7 +87,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #00897b;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -100,16 +101,24 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #00897b;
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.dark-teal-background {
+  background-color: #00564d;
 }
 
-.orange-text {
-  color: #f5ae23;
+.lite-teal-background{
+  background-color: #00897b;
+}
+
+.gray-text {
+  color: #969696;
+}
+
+.lite-teal-text{
+  color: #00897b;
 }
 
 .white-text {
@@ -117,19 +126,19 @@ a {
   color: #fff;
 }
 
-.gray {
-  background-color: #f3f3f3;
+.gray-background {
+  background-color: #969696;
   padding-bottom: 10px;
   clear:both;
 }
 
-.dark-gray {
-  background-color: #4a4a4a;
+.dark-gray-background {
+  background-color: #969696;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #282828;
 }
 
 .flex-box {
