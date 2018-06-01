@@ -45,7 +45,7 @@ var bio = {
         }
         $('#header').prepend(formattedHeaderPrepend).append(formattedHeaderAppend);
     }
-}
+};
 
 var education = {
     schools: [
@@ -136,7 +136,7 @@ var education = {
         }
         $('.education-entry:last').append(formattedOnlineCoursesString);
     }
-}
+};
 
 var work = {
     jobs: [
@@ -169,7 +169,7 @@ var work = {
             $(".work-entry:last").append(formattedEmploymentInfo);
         }
     }
-}
+};
 
 var projects = {
     projects: [
@@ -177,13 +177,13 @@ var projects = {
             title:"JAVA SWING Development",
             dates:"October 2015 - Present",
             description:"Developed new JAVA SWING applications for the NASA customer.",
-            images:[]
+            images:['images/deadlifting.jpg']
         },
         {
             title:"C# WPF Development",
             dates:"June 2015 - October 2015",
             description:"Fixed previous implementation of C#/WPF application.",
-            images:[]
+            images:['images/pexels-photo-135018.jpg']
         }
     ],
     display:function(){
@@ -197,7 +197,7 @@ var projects = {
             var formattedProjectDescription = HTMLprojectDescription.replace("%data%", this.projects[i].description);
             var formattedProjectImages = "";
             for(var j = 0; j < this.projects[i].images.length; j++) {
-                formattedProjectImages += HTMLprojectImage.replace("%data%", projects[i].images[j]);
+                formattedProjectImages += HTMLprojectImage.replace("%data%", this.projects[i].images[j]);
             }
             formattedProjectString += formattedProjectTitle + formattedProjectDates + formattedProjectDescription + formattedProjectImages;
 
@@ -205,7 +205,7 @@ var projects = {
 
         }
     }
-}
+};
 
 
 bio.display();
